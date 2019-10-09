@@ -4,7 +4,7 @@
 #' \code{join.dstamp} and \code{number.dive}).
 #' @param show.info Logical, should detaild information be shown while running function
 #' @param plotting Whether to plot the results or not
-#' @param match.window Size of time wondow within which peaks and lunges should be considered matched
+#' @param match.window Size of time window within which peaks and lunges should be considered matched
 #' @param smooth.window Initial window of smooth for gaussian running mean filter (equivalent to \code{presmooth.window} in \code{d.wave})
 #' @param pper Peak wavelet period for weighted power analysis (equivalent to \code{pk.per} in \code{d.wave})
 #' @param rper Range of all periods to be considered in weighted power analysis (equivalent to \code{per.rng} in \code{d.wave})
@@ -94,7 +94,7 @@ run.d.wave <- function(name=NA, data=NULL, show.info=F, plotting=T,
   }
 
   if('lunge' %in% names(df)) {
-    matched <- match.lunges(data=df)
+    matched <- match.lunges(data=df, window=match.window)
     df$matched <- rep(FALSE, nrow(df))
     df$matched[which(df$pks)] <- matched$matched
   }

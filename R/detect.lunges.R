@@ -368,7 +368,8 @@ match.lunges <- function(data=df, window=3) {
     any(pk)
   }))
 
-  true.neg <- length(which(!unmatched))
+  ## true.neg <- length(which(!unmatched))
+  true.neg <- nrow(data)-sum(c(true.pos, false.pos, false.neg))
 
   conf.mat <- matrix(c(true.pos, false.pos, false.neg, true.neg), ncol=2)
   dimnames(conf.mat) <- list(Observed=c('True', 'False'), Predicted=c('True', 'False'))

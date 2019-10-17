@@ -75,7 +75,9 @@ read.depth <- function(dirname='./Data/Takashi data/', whalename='mn16_Jan26', t
     xl <- loadWorkbook(which.summary)
     summ <- readWorksheet(xl, 1)
   } else {
-    xl <- loadWorkbook(paste(dirname, which.summary, sep='/'))
+    xl.file <- paste(dirname, which.summary, sep='/')
+    xl.file <- gsub('//', '/', xl.file)
+    xl <- loadWorkbook(xl.file)
     summ <- readWorksheet(xl, 1)
   }
   summ <- summ[match(tolower(whalename), tolower(summ$Data.ID)),]

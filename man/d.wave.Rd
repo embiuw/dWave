@@ -56,16 +56,16 @@ d103 <- d.wave(dive=103)
   \code{\link{number.dive}} to add dive numeric ID column,
   \code{\link{run.d.wave}} to run \code{d.wave} on entire data record from an animal.
 
-Other Lunge detector functions: \code{\link{d.wave.TDR}},
-  \code{\link{dstamp.plot}}, \code{\link{filter.lunges}},
-  \code{\link{gpsWhale}}, \code{\link{import.all.rene}},
-  \code{\link{join.dstamp}}, \code{\link{matDive}},
-  \code{\link{matLunge}}, \code{\link{match.lunges}},
-  \code{\link{mkDygraph}}, \code{\link{ncWhale}},
-  \code{\link{number.dive}}, \code{\link{optim.d.wave}},
-  \code{\link{read.depth}}, \code{\link{read.lunges}},
-  \code{\link{run.d.wave}}, \code{\link{whale2dstamp}},
-  \code{\link{wt.image.plot}}
+Other Lunge detector functions: \code{\link{d.wave.TDR.original}},
+  \code{\link{d.wave.TDR}}, \code{\link{dstamp.plot}},
+  \code{\link{filter.lunges}}, \code{\link{gpsWhale}},
+  \code{\link{import.all.rene}}, \code{\link{join.dstamp}},
+  \code{\link{matDive}}, \code{\link{matLunge}},
+  \code{\link{match.lunges}}, \code{\link{mkDygraph}},
+  \code{\link{ncWhale}}, \code{\link{number.dive}},
+  \code{\link{optim.d.wave}}, \code{\link{read.depth}},
+  \code{\link{read.lunges}}, \code{\link{run.d.wave}},
+  \code{\link{whale2dstamp}}, \code{\link{wt.image.plot}}
 }
 \author{
 Martin Biuw

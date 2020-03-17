@@ -24,9 +24,9 @@ Returns SpatialPointsDataFrame
 \code{ncWhale} to read data from standard netCDF tagtools file,
 \code{whale2dstamp} to convert to dstamp format that can be used in 2D lunge detection with validation (e.g. \code{run.d.wave})
 
-Other Lunge detector functions: \code{\link{d.wave.TDR}},
-  \code{\link{d.wave}}, \code{\link{dstamp.plot}},
-  \code{\link{filter.lunges}},
+Other Lunge detector functions: \code{\link{d.wave.TDR.original}},
+  \code{\link{d.wave.TDR}}, \code{\link{d.wave}},
+  \code{\link{dstamp.plot}}, \code{\link{filter.lunges}},
   \code{\link{import.all.rene}}, \code{\link{join.dstamp}},
   \code{\link{matDive}}, \code{\link{matLunge}},
   \code{\link{match.lunges}}, \code{\link{mkDygraph}},

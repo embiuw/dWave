@@ -40,16 +40,16 @@ for(i in file.pos) eval(parse(text=paste(i, '$ds <- whale2dstamp(', i, ')', sep=
 \code{gpsWhale} to read GPS position data,
 \code{whale2dstamp} to convert to dstamp format that can be used in 2D lunge detection with validation (e.g. \code{run.d.wave})
 
-Other Lunge detector functions: \code{\link{d.wave.TDR}},
-  \code{\link{d.wave}}, \code{\link{dstamp.plot}},
-  \code{\link{filter.lunges}}, \code{\link{gpsWhale}},
-  \code{\link{join.dstamp}}, \code{\link{matDive}},
-  \code{\link{matLunge}}, \code{\link{match.lunges}},
-  \code{\link{mkDygraph}}, \code{\link{ncWhale}},
-  \code{\link{number.dive}}, \code{\link{optim.d.wave}},
-  \code{\link{read.depth}}, \code{\link{read.lunges}},
-  \code{\link{run.d.wave}}, \code{\link{whale2dstamp}},
-  \code{\link{wt.image.plot}}
+Other Lunge detector functions: \code{\link{d.wave.TDR.original}},
+  \code{\link{d.wave.TDR}}, \code{\link{d.wave}},
+  \code{\link{dstamp.plot}}, \code{\link{filter.lunges}},
+  \code{\link{gpsWhale}}, \code{\link{join.dstamp}},
+  \code{\link{matDive}}, \code{\link{matLunge}},
+  \code{\link{match.lunges}}, \code{\link{mkDygraph}},
+  \code{\link{ncWhale}}, \code{\link{number.dive}},
+  \code{\link{optim.d.wave}}, \code{\link{read.depth}},
+  \code{\link{read.lunges}}, \code{\link{run.d.wave}},
+  \code{\link{whale2dstamp}}, \code{\link{wt.image.plot}}
 }
 \author{
 Martin Biuw

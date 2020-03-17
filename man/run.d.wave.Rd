@@ -18,7 +18,7 @@ run.d.wave(name = NA, data = NULL, show.info = F, plotting = T,
 
 \item{plotting}{Whether to plot the results or not}
 
-\item{match.window}{Size of time wondow within which peaks and lunges should be considered matched}
+\item{match.window}{Size of time window within which peaks and lunges should be considered matched}
 
 \item{smooth.window}{Initial window of smooth for gaussian running mean filter (equivalent to \code{presmooth.window} in \code{d.wave})}
 
@@ -54,16 +54,16 @@ df <- run.d.wave(data=df)
   \code{\link{number.dive}} to add dive numeric ID column,
   \code{\link{d.wave}} to run lunge detector omn single dives.
 
-Other Lunge detector functions: \code{\link{d.wave.TDR}},
-  \code{\link{d.wave}}, \code{\link{dstamp.plot}},
-  \code{\link{filter.lunges}}, \code{\link{gpsWhale}},
-  \code{\link{import.all.rene}}, \code{\link{join.dstamp}},
-  \code{\link{matDive}}, \code{\link{matLunge}},
-  \code{\link{match.lunges}}, \code{\link{mkDygraph}},
-  \code{\link{ncWhale}}, \code{\link{number.dive}},
-  \code{\link{optim.d.wave}}, \code{\link{read.depth}},
-  \code{\link{read.lunges}}, \code{\link{whale2dstamp}},
-  \code{\link{wt.image.plot}}
+Other Lunge detector functions: \code{\link{d.wave.TDR.original}},
+  \code{\link{d.wave.TDR}}, \code{\link{d.wave}},
+  \code{\link{dstamp.plot}}, \code{\link{filter.lunges}},
+  \code{\link{gpsWhale}}, \code{\link{import.all.rene}},
+  \code{\link{join.dstamp}}, \code{\link{matDive}},
+  \code{\link{matLunge}}, \code{\link{match.lunges}},
+  \code{\link{mkDygraph}}, \code{\link{ncWhale}},
+  \code{\link{number.dive}}, \code{\link{optim.d.wave}},
+  \code{\link{read.depth}}, \code{\link{read.lunges}},
+  \code{\link{whale2dstamp}}, \code{\link{wt.image.plot}}
 }
 \author{
 Martin Biuw

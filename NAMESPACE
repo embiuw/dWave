@@ -2,6 +2,7 @@
 
 export(d.wave)
 export(d.wave.TDR)
+export(d.wave.TDR.original)
 export(detect.lunge)
 export(dstamp.plot)
 export(filter.lunges)

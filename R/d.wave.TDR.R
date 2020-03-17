@@ -1,7 +1,10 @@
 #' \code{d.wave.TDR} 2D lunge detector for individual dive in a TDR record
-#' @param tdr.file R object containing pre-processed dive record. If set to NA, this function can run the detector on data from all individuals with data records stored in the directory specified in \code{tdr.folder}.
+#' @param tdr.file R object containing pre-processed dive record.
+#' If set to NA, this function can run the detector on data from all individuals
+#' with data records stored in the directory specified in \code{tdr.folder}.
+#' NOTE! If you want to change parameter settings you need to run the function for each whale separately!
 #' @param tdr.folder Folder in which TDR files are stored
-#' @details Run the 2D lunged detector on TDR-type dive data, i.e. this version has no valiudation against pre-determined lunges
+#' @details Run the 2D lunged detector on TDR-type dive data, i.e. this version has no validation against pre-determined lunges
 #' @family Lunge detector functions
 #' @seealso \code{\link{run.d.wave}} for data type with validation against pre-determined lunges.
 #' @author Martin Biuw
@@ -10,7 +13,9 @@
 #' @export
 
 d.wave.TDR <- function(tdr.file='./Data/HVTag/Rfiles/Whale_2015Feb23.RData',
-                       tdr.folder='./Data/HVTag/Rfiles') {
+                       tdr.folder='./Data/HVTag/Rfiles',
+                       pars=list(smooth.window=4, pper=16, rper=20,
+                                 min.pdist=40, min.ppow=0.05, pk.e=0.85)) {
   if(!is.na(tdr.file)) {
     load(tdr.file)
     whalename <- tail(unlist(strsplit(tdr.file, '/')),1)
@@ -18,7 +23,8 @@ d.wave.TDR <- function(tdr.file='./Data/HVTag/Rfiles/Whale_2015Feb23.RData',
     eval(parse(text=paste('tdr <- ', whalename, '$original')))
     cat('Running 2D lunge detector for whale', whalename, '     \n')
     flush.console()
-    tdr <- run.d.wave(data=tdr)
+    tdr <- run.d.wave(data=tdr, smooth.window=pars$smooth.window, pper=pars$pper,
+                      rper=pars$rper, min.pdist=pars$min.pdist, min.ppow=pars$min.ppow, pk.e=pars$pk.e)
     tdr
   } else {
     tdr.file <- paste(tdr.folder, dir(tdr.folder), sep='/')

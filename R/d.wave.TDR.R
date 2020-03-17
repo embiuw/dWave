@@ -2,8 +2,9 @@
 #' @param tdr.file R object containing pre-processed dive record.
 #' If set to NA, this function can run the detector on data from all individuals
 #' with data records stored in the directory specified in \code{tdr.folder}.
-#' NOTE! If you want to change parameter settings you need to run the function for each whale separately!
-#' @param tdr.folder Folder in which TDR files are stored
+#' @param tdr.folder Folder in which TDR files are stored.
+#' @param pars List of parameter settings that can be modified by the user.
+#' NOTE! This can only be done when running the function for each whale separately!
 #' @details Run the 2D lunged detector on TDR-type dive data, i.e. this version has no validation against pre-determined lunges
 #' @family Lunge detector functions
 #' @seealso \code{\link{run.d.wave}} for data type with validation against pre-determined lunges.

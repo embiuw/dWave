@@ -339,7 +339,7 @@ detect.lunge <- function(data=dfc, method='resid',
 #' matched <- match.lunges(df)
 #' @export
 
-match.lunges <- function(data=df, window=3) {
+match.lunges <- function(data=df, window=15) {
   true.lunges <- which(data$lunge)
   if(length(true.lunges)>0) {
     matched <- unlist(lapply(true.lunges, function(x) {

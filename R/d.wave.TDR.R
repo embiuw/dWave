@@ -3,6 +3,8 @@
 #' If set to NA, this function can run the detector on data from all individuals
 #' with data records stored in the directory specified in \code{tdr.folder}.
 #' @param tdr.folder Folder in which TDR files are stored.
+#' @param save.wavelet Option to switch off saving of wavelet output to the list in order to reduce object size.
+#' This can be especially useful if you run the function on all records in a folder, and save them into a list.
 #' @param pars List of parameter settings that can be modified by the user.
 #' NOTE! This can only be done when running the function for each whale separately!
 #' @details Run the 2D lunged detector on TDR-type dive data, i.e. this version has no validation against pre-determined lunges
@@ -14,7 +16,7 @@
 #' @export
 
 d.wave.TDR <- function(tdr.file='./Data/HVTag/Rfiles/Whale_2015Feb23.RData',
-                       tdr.folder='./Data/HVTag/Rfiles',
+                       tdr.folder='./Data/HVTag/Rfiles', save.wavelet=T,
                        pars=list(smooth.window=4, pper=16, rper=20,
                                  min.pdist=40, min.ppow=0.05, pk.e=0.85)) {
   if(!is.na(tdr.file)) {
@@ -48,7 +50,11 @@ d.wave.TDR <- function(tdr.file='./Data/HVTag/Rfiles/Whale_2015Feb23.RData',
 ##        dg <- mkDygraph(tdr)
 ##        tdr.tmp$graph <- dg
 ##        tdr.list[[w]] <- tdr.tmp
-          tdr.list[[w]] <- tdr
+          if(save.wavelet) {
+            tdr$detects <- NA
+          }
+        tdr.list[[w]] <- tdr
+
         ##eval(parse(text=paste(whalename, '<- tdr.tmp')))
       }
     }
